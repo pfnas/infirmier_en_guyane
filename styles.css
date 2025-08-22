@@ -1,0 +1,303 @@
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #f2f2f2;
+  color: #333;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+/* Espacement global entre sections, paragraphes et images */
+
+main > * + * {
+  margin-top: 30px;  /* espace vertical entre les sections principales dans <main> */
+}
+
+p {
+  margin-bottom: 1.2em; /* espace sous chaque paragraphe */
+  line-height: 1.6;
+}
+
+img {
+  display: block;      /* évite les petits espaces sous l'image */
+  max-width: 100%;
+  height: auto;
+  margin-top: 15px;    /* espace au dessus des images */
+  margin-bottom: 15px; /* espace sous les images */
+  border-radius: 8px;  /* optionnel, arrondi les coins */
+}
+
+
+/* HEADER */
+header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  background-color: #28a745;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 6px;
+  gap: 20px;
+}
+
+/* Logo */
+.logo img {
+  height: 50px;
+  width: auto;
+}
+
+/* Titre centré */
+header h1 {
+  text-align: center;
+  font-size: 1.8rem;
+  justify-self: center;
+}
+
+/* Nav menu horizontal */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* FOOTER */
+footer {
+  background-color: #28a745;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 6px;
+  margin-top: auto;
+  text-align: center;
+}
+
+/* Footer list horizontal */
+footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 10px;
+}
+
+footer ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: text-decoration 0.3s ease;
+}
+
+footer ul li a:hover {
+  text-decoration: underline;
+}
+
+/* MAIN */
+main {
+  flex-grow: 1;
+  max-width: 900px;
+  margin: 40px auto;
+  width: 100%;
+}
+
+/* Carousel wrapper */
+.carousel-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Carousel container */
+.gallery-container {
+  text-align: center;
+}
+
+.main-image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;         /* assure un format fixe responsive */
+  overflow: hidden;             /* masque ce qui dépasse */
+  border-radius: 10px;
+}
+
+.main-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;            /* remplit le cadre sans déformation */
+  display: block;
+  border-radius: 10px;
+}
+
+
+/* Navigation arrows */
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 28px;
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 2;
+  border-radius: 50%;
+  user-select: none;
+}
+
+.nav.left {
+  left: 10px;
+}
+
+.nav.right {
+  right: 10px;
+}
+
+/* Thumbnails */
+.thumbnails {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+.thumbnails-solo {
+  width: 75%;
+  margin: 30px auto;           /* centre horizontalement et ajoute de l’espace vertical */
+}
+
+.thumbnails-solo img {
+  width: 100%;                 /* image prend toute la largeur du conteneur */
+  height: auto;
+  display: block;              /* évite les marges blanches sous l'image */
+  border-radius: 8px;          /* optionnel : coins arrondis */
+}
+
+
+
+.thumb {
+  width: 100px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 3px solid transparent;
+  transition: border 0.3s ease;
+}
+
+.thumb:hover,
+.thumb.active {
+  border: 3px solid #007bff;
+}
+.thumbnails-videos {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .thumb {
+    width: 80px;
+    height: 50px;
+  }
+
+  .nav {
+    font-size: 22px;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .thumb {
+    width: 60px;
+    height: 40px;
+  }
+
+  .main-image {
+    aspect-ratio: 4 / 3;
+  }
+}
+/*----media queries faire disparaitre les miniatures en affichage télephone------*/
+@media (max-width: 480px) {
+  .thumbnails {
+    display: none;
+  }
+}
+/*----------------video et texte affichage propre-----------*/
+.thumbnails-videos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;            /* permet l'empilement sur mobile */
+  margin: 40px auto;
+  max-width: 1000px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.thumbnails-videos video {
+  width: 100%;
+  max-width: 480px;           /* limite la taille de la vidéo */
+  height: auto;
+  border-radius: 8px;
+}
+
+.thumbnails-videos p {
+  max-width: 500px;
+  line-height: 1.6;
+}
+/*---------------aligner des images--------------*/
+.thumbnails-duo {
+  display: flex;
+  justify-content: center;   /* centre horizontalement */
+  align-items: center;       /* aligne verticalement (si utile) */
+  gap: 20px;                 /* espace entre les images */
+  margin: 30px 0;            /* espace autour du bloc */
+  flex-wrap: wrap;           /* permet le retour à la ligne si petit écran */
+}
+
+.thumbnails-duo {
+  display: flex;
+  justify-content: center;   /* centre horizontalement */
+  align-items: center;       /* aligne verticalement (si utile) */
+  gap: 20px;                 /* espace entre les images */
+  margin: 30px 0;            /* espace autour du bloc */
+  flex-wrap: wrap;           /* permet le retour à la ligne si petit écran */
+}
+
+.thumbnails-duo img {
+  width: 200px;              /* taille ajustable selon besoin */
+  max-width: 100%;           /* évite de dépasser le conteneur */
+  height: auto;              /* conserve les proportions */
+  border-radius: 8px;        /* optionnel : coins arrondis */
+}
+

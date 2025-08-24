@@ -6,16 +6,18 @@
     <title>Infirmier en Guyane</title>
     <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-
-    <!-- En-tête -->
+<body>  
+   
+    
+    <!-- === EN-TÊTE === -->
     <header>
-        <!-- logo -->
+        <!-- logo principal -->
         <div class="logo">
-            <img src="./assets/Flag_of_French_Guiana_resultat.webp" alt="Logo" />
+            <img src="./assets/Flag_of_French_Guiana_resultat.webp" alt="Logo">
         </div>
         <h1>Infirmier en Guyane</h1>
         <!--<h2>Périple d'un infirmier en Guyane</h2>-->
+
         <nav>
             <ul>
                 <li><a href="#home">Accueil</a></li>
@@ -28,7 +30,11 @@
 
     <!-- Section principale -->
     <main>
-        <h2>La Guyane</h2>
+        <h2 id="guyane">
+                <!-- La Guyane
+                <img src="./assets/toucan-loader.png" alt="Toucan décoratif" class="toucan-h2"> -->
+        </h2>
+
         <p>
             Saviez-vous que la France avait une frontière commune avec le Brésil ?  
             Et oui, et le département qui a ce privilège est frontalier avec le nord du Brésil, l'est du Suriname,  
@@ -37,10 +43,10 @@
             Le fleuve Maroni est sa frontière avec le Surinam à l'Ouest,  
             et son pendant à l'Est est le fleuve Oyapock qui le sépare du Brésil.
         </p>
-        <div class="thumbnails-duo">
-          <img src="./assets/images_resultat.webp" alt="carte_guyane" srcset="">
-          <img src="./assets/guitare.webp" alt="carte_guyane" srcset="">
-          <img src="./assets/images_resultat.webp" alt="carte_guyane" srcset="">
+        <div class="thumbnails">
+            <img src="./assets/images_resultat.webp" alt="carte_guyane">
+            <img src="./assets/guitare.webp" alt="guitare">
+            <img src="./assets/images_resultat.webp" alt="carte_guyane">
         </div>
 
         <h2>Une riche biodiversité</h2>
@@ -50,8 +56,9 @@
             <a href="https://www.parc-amazonien-guyane.fr/fr">Parc Amazonien</a>  
             qui vise à préserver sa faune et sa flore.
         </p>
-<h2>Petit échantillon de la faune</h2>
-        <!-- Carousel centré horizontalement -->
+
+        <h2>Petit échantillon de la faune</h2>
+        <!-- Carousel -->
         <div class="carousel-wrapper">
             <div class="gallery-container">
                 <div class="main-image">
@@ -61,11 +68,11 @@
                 </div>
 
                 <div class="thumbnails">
-                    <img src=".//assets/lezard_resultat.webp" alt="lezard" class="thumb active" />
+                    <img src="./assets/lezard_resultat.webp" alt="lezard" class="thumb active" />
                     <img src="./assets/martin_pecheur.webp" alt="oiseau" class="thumb" />
                     <img src="./assets/chauve_souris_resultat.webp" alt="chauve_souris" class="thumb" />
                     <img src="./assets/paresseux_2_resultat.webp" alt="paresseux" class="thumb" />
-                    <img src="./assets/ara.webp" alt="ara "class="thumb" />
+                    <img src="./assets/ara.webp" alt="ara" class="thumb" />
                     <img src="./assets/paresseux_3_resultat.webp" alt="paresseux" class="thumb" />
                     <img src="./assets/singe_resultat.webp" alt="singe" class="thumb" />
                     <img src="./assets/singe_trois.webp" alt="singe" class="thumb" />
@@ -80,17 +87,29 @@
                     <img src="./assets/libellule_un.webp" alt="libellule" class="thumb" />  
                     <img src="./assets/libellule_deux.webp" alt="libellule" class="thumb" />  
                     <img src="./assets/libellule_3.webp" alt="libellule" class="thumb" />  
-                    <img src="./assets/grenouille_1_resultat.webp" alt="libellule" class="thumb" />  
-                    <img src="./assets/grenouille_2_resultat.webp" alt="libellule" class="thumb" /> 
+                    <img src="./assets/grenouille_1_resultat.webp" alt="grenouille" class="thumb" />  
+                    <img src="./assets/grenouille_2_resultat.webp" alt="grenouille" class="thumb" /> 
                     <img src="./assets/serpent.webp" alt="serpent" class="thumb" /> 
                     <img src="./assets/serpent_1.webp" alt="serpent" class="thumb" /> 
-                     <img src="./assets/grenouille_4.webp" alt="libellule" class="thumb" /> 
-                    <img src="./assets/iguane_resultat.webp" alt="iguane_resultat" class="thumb" />         
-                      
-                </div> 
-                              <!-- Flore -->
+                    <img src="./assets/grenouille_4.webp" alt="grenouille" class="thumb" /> 
+                    <img src="./assets/iguane_resultat.webp" alt="iguane" class="thumb" />         
+                </div>
             </div>
         </div>
+        <h3>La flore</h3>
+        <p>La flore tout mme la faune est luxuriante, partout en amazone on peut observer des fleurs, des arbres.
+            On a l'impréssion que tout n'est que vert mais en observant on finit par en distinguer les différentes
+            plantes et arbres.
+             <div class="thumbnails-several">
+                <img src="./assets/veg1.webp" alt="ariane 1" class="thumb" />
+                <img src="./assets/veg2.webp" alt="ariane 2" class="thumb" />
+                <img src="./assets/veg3.webp" alt="ariane 1" class="thumb" />
+                <img src="./assets/veg4.webp" alt="ariane 2" class="thumb" />
+                <img src="./assets/veg6.webp" alt="ariane 1" class="thumb" />
+                <img src="./assets/veg7.webp" alt="ariane 2" class="thumb" />
+                
+            </div>
+        </p>
 
         <div class="photo">
             <p>
@@ -98,79 +117,76 @@
                 plus au sud celui de Kourou, ensuite celui de Cayenne.  
                 Dans les communes ou à l'intérieur de la forêt amazonienne, il existe un maillage de CDPS  
                 (dispensaire qui assure la plupart des soins en partant de la médecine de ville  
-                à la pédiatrie, le suivi des grossesses jusqu'aux accouchements.  
-                À cela rajouter tout ce qui concerne les urgences relatives et vitales...  
-                la liste est non exhaustive en ce qui concerne le parcours de santé)
+                à la pédiatrie, le suivi des grossesses jusqu'aux accouchements...).
             </p>
-           
-                <img src="./assets//grand_santi.webp" alt="Image 2" />
-            </div>
+            <p class="thumbnails-solo">
+                <img src="./assets/grand_santi.webp" alt="Grand Santi" />
+            </p>
         </div>
 
         <h3>La Guyane moderne</h3>
         <p>
-            Au cours de mon passage en Guyane, j'ai rencontré 2 mondes totalement opposés,
-             à savoir une Guyane résolument moderne,  
-            concernant notamment les villes côtières comme Cayenne et Kourou,  
-            etune Guyane sauvage en communes parfois totalement isolées géographiquement  
-            où l'accès ne se fait que par pirogue et/ou avion  
-            ou en traversant totalement la forêt, ce que je n'ai même pas essayé 
-            (il reste les aventures de  <a href="https://fr.wikipedia.org/wiki/Raymond_Maufrais">Raymond Maufrais</a> 
-            ou <a href="https://fr.wikipedia.org/wiki/Raymond_Maufrais">André Cognat</a>
-            pour ne citer que 2 explorateurs français connus sur le territoire  guyanais pour en comprendre les difficultés).
-             
+            Au cours de mon passage en Guyane, j'ai rencontré 2 mondes totalement opposés :  
+            une Guyane résolument moderne (notamment Cayenne et Kourou),  
+            et une Guyane sauvage, où l'accès ne se fait que par pirogue et/ou avion...
         </p>
+
         <h2>Kourou : Ariane</h2>
-       <div class="thumbnails-videos">
-    <!-- Conteneur vidéo -->
-    <div class="video-container">
-        <video controls width="80%" poster="assets/apercu.jpg">
-            <source src="./videos/VID_20181019_224452.mp4" type="video/mp4" />
-        </video>
-    </div>
-
-    <!-- Conteneur des miniatures -->
-    <div class="thumbnails-duo">
-        <img src="./assets/ariane_1.webp" alt="image 1" class="thumb" />
-        <img src="./assets/ariane2.webp" alt="avion" class="thumb" />
-    </div>
-</div>
-
-                 <p>LE 101 eme tir de Ariane V, un moment magique à vivre!
-                Totalement en opposition avec l'image que j'avais de ce territoire à mon arrivée,
-                 ou tout mon entourage ne me parlait de jungles
-                d'insectes, d'animaux sauvages, de bagne et notemment le celèbre bagne 
-                de Cayenne ou celui moins 
-                connu car totalement detruit bagne des anamites, et d'enfer vert.
-                </p>
+        <div class="thumbnails-videos">
+            <!-- Vidéo -->
+            <div class="video-container">
+                <video controls width="80%" poster="assets/apercu.jpg">
+                    <source src="./videos/VID_20181019_224452.mp4" type="video/mp4" />
+                </video>
             </div>
-            <!---<video controls width="50%" poster="assets/apercu.jpg">
-                    <source src="./videos/VID-20200211-WA0036.mp4" type="video/mp4" />
-                    
-            </video>-->
+            <!-- Miniatures -->
+            <div class="thumbnails-duo">
+                <img src="./assets/ariane_1.webp" alt="ariane 1" class="thumb" />
+                <img src="./assets/ariane2.webp" alt="ariane 2" class="thumb" />
+            </div>
         </div>
-        <!-- orpaillage -->
-        <h3>Moyens de locomotion</h3>
-        <p>Suivant l'endroit ou le lieu ou vous vous situez, littoral ou Communes (milieux isolés), 
-            le transports 
-            peuvent être assez exotiques.
-            Sur le littoral, l'Est et l'Ouest sont reliés par les nationales 1 et 2 au départ de Cayenne,
-             pas vraiment de soucis
-            pour circuler si vous trouvez un véhicule.
-            A savoir tout de même qu'il existe tres peu de navettes et qu'il faut faire préférence 
-            aux navettes privées, co-voiturage ou....avion. Pas de réseau férroviaire.
-            Par contre c'est une autre histoire désqu'il s'agit de rejoindre les communes, 
-            il ne reste que les vols internes
-            ou la pirogue au départ de Saint Laurent du Maroni dans l'Ouest qui va desservir tous les
-            Kampoes (villages) situés le long du fleuve Maroni, ou dans l'Est Guyanais 
-            au départ de Saint Georges de l'Oyapocke.
-            lLe Fleuve Oyapocke qui sert de frontiere avec le Brésil
-            permetra de rejoindre les différents villages.
-            Mais quel plaisir ou pas de se retrouver à faire de la pirogue Stop le long des fleuves.
-            Et on ne sait jamais quand se fait le départ et du coup l'arrivée, 
-            même avec les pirogues officielles de l'hôpital, on n'est jamais sûr de son coup.
-
+        
+        <p>
+            Le 101e tir d’Ariane V, un moment magique à vivre ! 
+            Une lueur dans la nuit, une boule de feu qui monte au ciel et aprés un petit moment,
+            les vibrations sous nos pieds, l'odeur et le bruit des moteurs qui nous parvient.
+            Quel contraste avec le pays que je découvrirai ensuite.
+           
         </p>
+
+        <!-- Moyens de locomotion -->
+        <h3>Moyens de locomotion</h3>
+        <div class="video-container">
+                <video controls width="80%" poster="assets/apercu.jpg">
+                    <source src="./videos/20240122_120015.mp4" type="video/mp4" />
+                </video>
+            </div>
+        <p>
+            Suivant l'endroit ou vous devez vous déplacer, les transports peuvent être assez exotiques...
+            Le long du littoral, pas de problemes particuliers hormi le fait que les transports en commun 
+            sont peu nombreux et il vaut mieux privilégier les navettes privées pour se rendre dans 
+            le nord ou le sud du département. J'aurai même été pris en stop dans
+             le panier à salade et même un pirogue des gendarmes.
+            A part cela ne reste que les pirogues pour rallier les villages disséminés le long du fleuve 
+            Surinam à l'Ouest ou Oyapoque a l'Est.
+            Quel plaisir ou quel enfer de faire de la pirogue-stop et ne pas savoir quand se fera le départ 
+            et encore moins qand se fera l'arrivée. La notion de temps n'est pas la même la bas et il faut en 
+            plus tenir compte de la saison des pluies ou de la saison sèche.
+        </p>
+         <!-- Vidéo -->
+            <div class="video-container">
+                <video controls width="80%" poster="assets/apercu.jpg">
+                    <source src="./videos/pirogue.mp4" type="video/mp4" />
+                </video>
+            </div>
+            <p>La pirogue, c'est trop classe les premières fois, mais au bout de quelques voyages
+                on commence à en entrevoir les innvénients surtout quand elles ne sont pas 
+                couvertes...à savoir pluies, soleil
+                et chaleur. Mais il se fait toujours un arret le long des épiceries dédiées 
+                à l'orpaillage le long des rives du Surinam(pays)
+
+            </p>
+            <!-- <h3>Les moyens de locomotion</h3> -->
         <div class="carousel-wrapper">
             <div class="gallery-container">
                 <div class="main-image">
@@ -178,32 +194,46 @@
                     <img class="displayed-img" src="./assets/avion.webp" alt="Image principale" />
                     <button class="nav right">&#10095;</button>
                 </div>
-
                 <div class="thumbnails">
-                   
                     <img src="./assets/avion.webp" alt="avion" class="thumb" />
                     <img src="./assets/pirogue_2_resultat.webp" alt="pirogue" class="thumb" />
-                    <img src="./assets/pirogue_3.webp" alt="avion" class="thumb" />
-                    <img src="./assets/pirogue6.webp" alt="avion" class="thumb" />
-                    <img src="./assets/pirogue_4_resultat.webp" alt="avion" class="thumb" />
-                    <img src="./assets/pirogue_6_resultat.webp" alt="avion" class="thumb" />
-                    <img src="./assets/pirogue_5.webp" alt="avion" class="thumb" />
-                    <img src="./assets/pirogue_7_resultat.webp" alt="avion" class="thumb" />
-                    <img src="./assets/voiture_3.webp" alt="avion" class="thumb" />  
-                      <p>Suite en construction.....ou en reflexion</p>                         
-                      
+                    <img src="./assets/pirogue_3.webp" alt="pirogue" class="thumb" />
+                    <img src="./assets/pirogue6.webp" alt="pirogue" class="thumb" />
+                    <img src="./assets/pirogue_4_resultat.webp" alt="pirogue" class="thumb" />
+                    <img src="./assets/pirogue_6_resultat.webp" alt="pirogue" class="thumb" />
+                    <img src="./assets/pirogue_5.webp" alt="pirogue" class="thumb" />
+                    <img src="./assets/pirogue_7_resultat.webp" alt="pirogue" class="thumb" />
+                    <img src="./assets/voiture_3.webp" alt="voiture" class="thumb" />  
+                    <img src="./assets/panier_a_salade.webp" alt="voiture" class="thumb" />  
                 </div>
-               
             </div>
-        </div>   
-         
-
+        </div> 
+        <h3>L'orpaillage</h3>
+        <p>Véritable fléau en Guyane, l'orpaillage.
+            Il est concentré sur sur le Maroni essentiellement. En navigant sur le fleuve 
+            c'est des dizaines et des dizaines
+            de barges d'orpaillage, de camps d'orpailleurs que l'on peut rencontrer, on les voit au milieu de la foret
+            quand on la survole en avion. Le fleuve porte les
+            stigmates qu'on aperçoit sur les berges en saison sèche tellemnt la végétation en est détruite
+            à cause du mercure utilisé pour extraire l'or.
+            Ici en métropole on a les magasins "tout dédié" au bricolage, en Guyane c'est  "tout dédié" à l'orpaillage.
+            Et rien n'est caché, ce sont les boutiques qui ont pignon sur rue...heu je veux dire pignon sur le fleuve
+        </p> 
+        <div class="thumbnails-several">
+            <img src="./assets/or.webp" alt="ariane 1" class="thumb" />
+            <img src="./assets/or2.webp" alt="ariane 2" class="thumb" />
+            <img src="./assets/or3.webp" alt="ariane 1" class="thumb" />
+            <img src="./assets/or4_resultat.webp" alt="ariane 2" class="thumb" />
+            <img src="./assets/or5_resultat.webp" alt="ariane 2" class="thumb" />
+            <img src="./assets/or6_resultat.webp" alt="ariane 2" class="thumb" />
+            <img src="./assets/or7_resultat.webp" alt="ariane 2" class="thumb" />
+            <img src="./assets/or8_resultat.webp" alt="ariane 2" class="thumb" />        
+        </div>
     </main>
-    <!-- Activités -->
-     <!--  -->
+            
+   <p>.....en pleine réflexion...j'ai le temps</p>
 
     <!-- Pied de page -->
-     
     <footer>
         <p>© 2025 Infirmier en Guyane. Tous droits réservés.</p>
     </footer>

@@ -197,6 +197,41 @@ main {
 .nav.right {
   right: 10px;
 }
+.thumbnails-several {
+  display: flex;
+  justify-content: center;   /* centre les images sur l’axe horizontal */
+  gap: 20px;
+  flex-wrap: wrap;           /* permet le retour à la ligne sur petits écrans */
+  margin: 40px auto;
+  max-width: 1000px;
+}
+
+.thumbnails-several img {
+  max-height: 180px;         /* limite la hauteur pour réduire l’image */
+  max-width: 250px;          /* limite la largeur */
+  width: auto;               /* conserve proportions */
+  height: auto;              /* conserve proportions */
+  object-fit: contain;       /* évite la déformation */
+  border-radius: 8px;
+  display: block;
+  margin: auto;              /* centre chaque image individuellement */
+}
+@media (max-width: 768px) {
+  .thumbnails-several img {
+    max-height: 140px;
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .thumbnails-several img {
+    max-height: 100px;
+    max-width: 150px;
+  }
+}
+.thumbnails-solo{
+  width: 7%;
+}
 
 /* Thumbnails */
 .thumbnails {
@@ -458,28 +493,15 @@ video {
     right: 10px;
 }
 
-/* Conteneur des miniatures */
-.thumbnails-duo {
-    display: flex;
-    justify-content: center;
-    gap: 15px; /* Espacement entre les miniatures */
-    flex-wrap: wrap; /* Permet de passer à la ligne suivante si l'écran est trop petit */
+/* Cache les miniatures mais les garde fonctionnelles */
+/* Cache les miniatures visuellement mais les garde fonctionnelles */
+.thumbnails {
+  opacity: 0;             /* transparent */
+  pointer-events: auto;   /* toujours cliquables */
+  position: absolute;     /* on les sort du flux visuel */
+  left: -9999px;          /* placées hors écran */
 }
 
-/* Style des miniatures */
-.thumbnails-duo img {
-    width: 100px; /* Taille des miniatures */
-    height: auto;
-    border-radius: 8px; /* Coins arrondis */
-    cursor: pointer;
-    transition: transform 0.3s ease; /* Effet de zoom au survol */
-}
-
-/* Effet de zoom sur les miniatures au survol */
-.thumbnails-duo img:hover {
-    transform: scale(1.1);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
 
 /* Réactivité pour écrans moyens et petits */
 @media (max-width: 768px) {
@@ -501,4 +523,3 @@ video {
         width: 60px; /* Réduit encore plus la taille des miniatures sur mobile */
     }
 }
-

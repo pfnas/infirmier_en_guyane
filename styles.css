@@ -661,4 +661,27 @@ width: 60px; /* Réduit encore plus la taille des miniatures sur mobile */
         display: inline-block;
     }
 }
+/* -------------------------effet loupe images--------------------*/
 
+
+.thumbnails-duo {
+  display: flex;
+  gap: 10px;
+  align-items: center; /* centre verticalement */
+}
+
+.thumb-wrapper {
+  display: inline-block;
+  transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* effet rebond */
+  transform-origin: center center;
+}
+
+.thumb-wrapper:hover {
+  transform: scale(3.5);
+}
+
+.thumb {
+  width: 200px;
+  height: auto;
+  display: block;
+}

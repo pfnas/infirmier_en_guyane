@@ -30,6 +30,24 @@ p {
   margin-bottom: 1.2em; /* espace sous chaque paragraphe */
   line-height: 1.6;
 }
+/* Espacement entre les titres et les paragraphes */
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 20px;  /* Espace sous les titres */
+}
+
+/* Espacement entre les paragraphes */
+p {
+    margin-top: 15px; /* Un peu d'espace au-dessus des paragraphes */
+    margin-bottom: 15px; /* Un peu d'espace en dessous des paragraphes */
+    text-indent: 2em; /* Tabulation au début de chaque paragraphe */
+    line-height: 1.6; /* Améliore la lisibilité en espaçant les lignes */
+}
+
+/* Optionnel : espacer davantage entre les titres et les paragraphes */
+h1, h2 {
+    margin-top: 40px;
+}
+
 
 img {
   display: block;      /* évite les petits espaces sous l'image */
@@ -299,5 +317,188 @@ main {
   max-width: 100%;           /* évite de dépasser le conteneur */
   height: auto;              /* conserve les proportions */
   border-radius: 8px;        /* optionnel : coins arrondis */
+}
+/*----------------miniature thumbnails--------------*/
+/* Style de base des images */
+.thumbnails-duo img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition fluide */
+    width: 100px; /* Largeur des miniatures */
+    height: auto;
+    border-radius: 8px;
+    cursor: pointer; /* Curseur de la souris pour indiquer que c'est cliquable */
+}
+
+/* Effet d'agrandissement au clic */
+.thumbnails-duo img:active {
+    transform: scale(1.5); /* Agrandir l'image à 150% de sa taille */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ajouter une ombre pour l'effet */
+}
+/* Général : Réinitialisation */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Conteneur général pour la vidéo et les miniatures */
+.thumbnails-videos {
+    display: flex;
+    flex-direction: column; /* Aligne la vidéo et les images sous forme de colonne */
+    align-items: center; /* Centre tout sur l'axe horizontal */
+    justify-content: center; /* Centre verticalement */
+    gap: 20px; /* Espacement entre la vidéo et les images */
+    padding: 20px; /* Ajoute un peu de marge autour du contenu */
+    background-color: #f4f4f4; /* Couleur de fond pour la page */
+}
+
+/* Conteneur de la vidéo */
+.video-container {
+    display: flex;
+    justify-content: center; /* Centre la vidéo horizontalement */
+    width: 100%;
+}
+
+/* Styles vidéo */
+video {
+    max-width: 100%; /* La vidéo prend 100% de la largeur disponible */
+    height: auto; /* La hauteur s'ajuste automatiquement pour garder les proportions */
+}
+
+/* Conteneur des miniatures */
+.thumbnails-duo {
+    display: flex;
+    justify-content: center; /* Centre les images horizontalement */
+    gap: 15px; /* Espacement entre les images */
+}
+
+/* Style des images miniatures */
+.thumbnails-duo img {
+    width: 120px; /* Largeur des images */
+    height: auto; /* Hauteur automatique pour garder les proportions */
+    border-radius: 8px; /* Bord arrondi pour un effet esthétique */
+    cursor: pointer; /* Change le curseur en main au survol */
+    transition: transform 0.3s ease; /* Animation fluide au survol */
+}
+
+/* Effet au survol des images */
+.thumbnails-duo img:hover {
+    transform: scale(1.1); /* Légère agrandissement des images */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Ombre légère autour de l'image */
+}
+
+/* Réactivité - Adaptation aux écrans plus petits */
+
+/* Pour les écrans de taille moyenne (tablettes) */
+@media (max-width: 768px) {
+    .video-container {
+        width: 90%; /* La vidéo prend 90% de la largeur sur tablettes */
+    }
+
+    .thumbnails-duo img {
+        width: 100px; /* Réduit la taille des images sur tablettes */
+    }
+}
+
+/* Pour les écrans très petits (smartphones) */
+@media (max-width: 480px) {
+    .video-container {
+        width: 100%; /* La vidéo prend toute la largeur de l'écran sur smartphones */
+    }
+
+    .thumbnails-duo img {
+        width: 80px; /* Réduit encore plus la taille des images sur smartphones */
+    }
+}
+/*-----------------------rousel wraper-------------------*/
+/* Styles généraux pour le carousel */
+.carousel-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px; /* Espacement entre la section principale et les miniatures */
+    padding: 40px; /* Padding pour créer de l'espace autour du carousel */
+}
+
+/* Conteneur principal pour l'image affichée */
+.gallery-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Espacement entre l'image principale et les miniatures */
+    width: 100%;
+}
+
+/* Conteneur de l'image principale */
+.main-image {
+    position: relative;
+    width: 80%; /* Vous pouvez ajuster cette taille selon la largeur souhaitée */
+}
+
+/* Style des boutons de navigation */
+.nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+    color: white;
+    font-size: 2em;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/* Positionnement des boutons : à gauche et à droite */
+.left {
+    left: 10px;
+}
+
+.right {
+    right: 10px;
+}
+
+/* Conteneur des miniatures */
+.thumbnails-duo {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Espacement entre les miniatures */
+    flex-wrap: wrap; /* Permet de passer à la ligne suivante si l'écran est trop petit */
+}
+
+/* Style des miniatures */
+.thumbnails-duo img {
+    width: 100px; /* Taille des miniatures */
+    height: auto;
+    border-radius: 8px; /* Coins arrondis */
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Effet de zoom au survol */
+}
+
+/* Effet de zoom sur les miniatures au survol */
+.thumbnails-duo img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Réactivité pour écrans moyens et petits */
+@media (max-width: 768px) {
+    .main-image img {
+        width: 100%; /* La taille de l'image principale prend 100% sur tablette */
+    }
+
+    .thumbnails-duo img {
+        width: 80px; /* Réduit la taille des miniatures sur tablette */
+    }
+}
+
+@media (max-width: 480px) {
+    .main-image img {
+        width: 100%; /* La taille de l'image principale prend 100% sur mobile */
+    }
+
+    .thumbnails-duo img {
+        width: 60px; /* Réduit encore plus la taille des miniatures sur mobile */
+    }
 }
 

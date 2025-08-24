@@ -631,3 +631,34 @@ width: 100%; /* La taille de l'image principale prend 100% sur mobile */
 width: 60px; /* Réduit encore plus la taille des miniatures sur mobile */
 }
 }
+/* Bouton flottant CDPS */
+.btn-cdps {
+    display: none; /* caché par défaut */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #008CBA;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 12px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    z-index: 9999;
+    transition: background 0.3s, transform 0.2s;
+}
+
+/* Effet hover (uniquement tactile si souris présente) */
+.btn-cdps:hover {
+    background: #006f94;
+    transform: scale(1.05);
+}
+
+/* Visible uniquement sur mobile et tablette */
+@media (max-width: 1024px) {
+    .btn-cdps {
+        display: inline-block;
+    }
+}
+

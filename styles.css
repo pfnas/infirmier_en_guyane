@@ -176,15 +176,18 @@ main p { width: 75%; margin: 0 auto 1.6em; text-align: justify; font-size: 1.05r
 main h2, main h3, main h4 { width: 75%; margin: 2em auto 1em; }
 
 /* responsive: texte pleine largeur en mobile + titres centrés */
+/* responsive: texte pleine largeur en mobile + titres alignés à gauche */
 @media (max-width: 768px) {
   main p,
   main h2, main h3, main h4 {
     width: 100%;
     margin-left: 0;
     margin-right: 0;
-    text-align: center;
+    text-align: left;   /* ⬅️ alignement gauche au lieu de center */
+    font-size: 1rem;    /* ⬅️ taille adaptée aux écrans mobiles */
   }
 }
+
 
 /* =======================
    CAROUSEL
@@ -265,7 +268,8 @@ button.nav.right{ right: 16px; }
 }
 .thumbnails-duo img:hover{ transform: scale(1.4); }
 @media (max-width:768px){ 
-  .thumbnails-duo img{ width:95%; height:auto; } 
+  .thumbnails-duo img{ width:95%; height:auto; 
+  } 
 }
 
 /* =======================
@@ -298,7 +302,7 @@ button.nav.right{ right: 16px; }
    VIDEOS
 ======================= */
 .video-container{
-  width: 80%; max-width: 720px; margin: 0 auto 20px;
+  width: 100%; max-width: 720px; margin: 0 auto 20px;
   border-radius: 12px; overflow: hidden;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
 }

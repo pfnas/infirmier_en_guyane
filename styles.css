@@ -320,7 +320,10 @@ footer p{ display: flex; align-items: center; gap: 0.6em; }
 ======================= */
 .btn-cdps{
   position: fixed; right: 20px; bottom: 20px;
-  background: var(--brand); color:#fff;
+
+  background: #0569bb;   /* 🔵 Bleu vif moderne */
+  color: white;
+  /* background: var(--brand); color:#fff; */
   padding: 14px 18px; border-radius: 999px; font-weight: 800;
   box-shadow: 0 8px 20px rgba(13, 48, 15, 0.35); cursor: pointer;
   z-index: 1000;
